@@ -1,0 +1,13 @@
+Package: mnmr
+Version: 0.0.1
+Date: 2015-09-08
+Title: Personal R package of Matthew N McCall
+Description: Miscellaneous R functions that I find useful.
+Author: Matthew N. McCall <mccallm@gmail.com>
+Maintainer: Matthew N. McCall <mccallm@gmail.com>
+Depends: R (>= 3.2.0)
+Imports: RColorBrewer
+VignetteBuilder: knitr
+Suggests: knitr, rmarkdown, RUnit
+License: GPL-3
+URL: http://mnmccall.com
