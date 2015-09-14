@@ -1,3 +1,4 @@
+###
 hclust_color <- function(hclust, lab=hclust$labels,
                          lab.col=rep(1,length(hclust$labels)), hang=0.1, ... )
   {
