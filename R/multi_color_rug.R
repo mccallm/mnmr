@@ -1,4 +1,5 @@
 ## multicolor rug function
+## using density estimation on dataset
 multi_color_rug <- function(den, col="YlOrRd", ticksize=0.03, side=1, lwd=0.5) 
 {
     x <- den$x
