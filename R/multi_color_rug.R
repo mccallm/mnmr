@@ -1,6 +1,7 @@
 ## multicolor rug function
 multi_color_rug <- function(den, col="YlOrRd", ticksize=0.03, side=1, lwd=0.5) 
 {
+    if(0 >= side | side > 5 ) {stop("Input value for side must be an intereger between 1 and 4.")}
     x <- den$x
     y <- den$y
     n <- length(y)
