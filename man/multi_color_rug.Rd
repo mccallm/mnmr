@@ -1,42 +1,35 @@
-\name{multi_color_rug}
-\alias{multi_color_rug}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-adding the multiple density color on the x axis 
-}
+\name{multy_color_rug}
+\alias{multy_color_rug}
+\title{Color representatiom of the density}
 \description{
-This function takes the density object and adds a density plot to an existing plot on the x axis. The deeper color shows the high density.
+  This function adds a color representation of the density on the x-axis.
 }
 \usage{
-multi_color_rug (object01, col="YlOrRd", ticksize=0.03, side=1, lwd=0.5) 
+multi_color_rug <- function(den, col="YlOrRd", ticksize=0.03, side=1, lwd=0.5)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{object01}{a object of density
-%%     ~~Describe \code{x} here~~
+  \item{den}{density, this argument of a function may be created using function density(x, ...).}
+  \item{col}{color pallet. Default is "YlOrRd".}
+  \item{ticksize}{the length of tick marks as a fraction of the smaller of the width or height of the plotting region. Default is 0.3.} 
+  \item{side}{an integer specifying which side of the plot the axis is to be drawn on. The values of side are: 1=below, 2=left, 3=above, 4=right. Default is 1.}
+  \item{lwd}{line width. Default is 0.5.}
 }
-  \item{col}{default = "Yl0rRD"}
-  \item{ticksize}{default =.03}
-  \item{side}{default = 1}
-  \item{lwd} {default =.5}
-}
-
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-A plot with density distribution on the x axis (one dimensional heatmap) is added to existing plot
+  This function adds a color representation of the density on the x-axis. Color scheme can be choosen from 3 types of palettes: sequential, diverging, and qualitative.
 }
 \author{Matthew N. McCall}
 \examples{
-  data(hclustData)
-  den <- density(hclustData)
+  A useful example goes here.
+  dat<-matrix(c(rnorm(100),
+              rnorm(100,mean=2),
+              rnorm(100, sd=2)), ncol=15) 
+  den<-density(dat)
   plot(den)
-  multi_color_rug (den)
-  
-  age <- runif(300)*105
+
+  multi_color_rug(den)
+
+  ## create age dependent data
+  ages<-abs(runif(300)*dat)*25
   plot(y=ages, x=dat, pch=20)
-  mult_color_rug(den)
 }
-\keyword{density}
+\keyword{multy_color_rug}
