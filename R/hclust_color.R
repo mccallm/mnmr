@@ -1,5 +1,8 @@
-hclust_color <- function(hclust, lab=hclust$labels,
-                         lab.col=rep(1,length(hclust$labels)), hang=0.1, ... )
+## hierachical clustering with coloring label for each vectors/covariates
+## lab = number of data vectors (covariates)
+
+hclust_color <- function(hclust, lab=hclust$label,
+                         lab.col=rep(1,length(hclust$label)), hang=0.1, ... )
   {
     y <- rep(hclust$height,2)
     x <- as.numeric(hclust$merge)
